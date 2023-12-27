@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600&display=swap');
+:root{
+    --main: rgb(144, 102, 196);
+    --font: rgb(30, 21, 41);
+}
+
+*{
+    margin:0; 
+    padding:0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background-color: var(--main);
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size:18px;
+    .container{
+        background-color: white;
+        color:var(--font);
+        width:450px;
+        padding: 3rem 2rem;
+        margin: 1rem;
+        border-radius: 10px;
+        .search-box{
+            display:flex;
+            flex-direction: row;
+            justify-content: space-between;
+            input{
+                width:70%;
+                border:none;
+                outline:none;
+                border-bottom:2px solid var(--main);
+                padding-bottom:0.5rem;
+                font-size: 17px;
+            }
+            button{
+                background-color: var(--main);
+                color:white;
+                border:none;
+                outline: none;
+                border-radius: 5px;
+                padding:0.7rem 1.5rem;
+            } 
+        }
+        .result{
+            margin-top: 3rem; 
+            div:not(:first-child){
+                margin-bottom:1rem;
+            }
+            .word{
+                display: flex;
+                justify-content: space-between;
+                button{
+                    border:none;
+                    outline:none;
+                    background-color: white;
+                    color:var(--main);
+                    font-size:18px;
+                }
+            }
+            .details{
+                font-weight: 300;
+                font-size:15px;
+                color:rgb(189, 184, 196);
+            }
+            .definition{
+                font-weight:300;
+            }
+            .example{
+                font-style: italic;
+                border-left: 5px solid var(--main);
+                padding-left: 20px;
+                font-size:16px;
+            }
+            .error{
+                text-align: center;
+            }
+        }
+    }
+    
+}
